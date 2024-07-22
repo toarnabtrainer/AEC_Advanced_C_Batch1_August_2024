@@ -1,6 +1,6 @@
-# AEC_Advanced_C_Batch_July_2024
+# AEC_Advanced_C_Batch1_August_2024
 
-* **GitHub Link:** github.com/toarnabtrainer/AEC_Advanced_C_Batch1_August_2024 or https://tinyurl.com/2pvyzydx
+* **GitHub Link:** https://github.com/toarnabtrainer/AEC_Advanced_C_Batch1_August_2024 or https://tinyurl.com/2pvyzydx
 * **MS-Teams Link:** https://tinyurl.com/2s3yxjnr
 
 <br>
