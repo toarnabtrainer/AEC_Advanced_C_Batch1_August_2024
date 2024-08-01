@@ -6,12 +6,18 @@ int main(void) {
 	int my_addition(int, int);
 	void my_display(int, int, int);
 	void my_exit(void);
+	void my_welcome(void);
 	
+	my_welcome();
 	num1 = my_input();
 	num2 = my_input();
 	total = my_addition(num1, num2);
 	my_display(num1, num2, total);
 	my_exit();
+}
+
+void my_welcome(void) {
+	printf("Welcome to the World of Programming...\n");
 }
 
 int my_input(void) {
