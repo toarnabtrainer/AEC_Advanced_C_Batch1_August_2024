@@ -2,7 +2,7 @@
 // #include <conio.h>
 int main(void) {
 	int num1, num2, total;
-	int input(void);
+	int my_input(void);
 	int my_addition(int, int);
 	
 	num1 = my_input();
