@@ -1,11 +1,12 @@
 #include <stdio.h>
 int main(void) {
-	int day, medi, medicount;
+	int day, medi, medicount = 0;
 	printf("\nVisit Doctor...");     // 1 time
 	for (day = 1; day <= 5; day++) {
 		printf("\nGood Morning...");     // 5 times
 		for(medi = 1; medi <= 3; medi++) {
 			printf("\nDay No. - %d and Medicine No. - %d...", day, medi);     // 15 times
+			medicount ++;
 		}
 		printf("\nGood Night...");     // 5 times
 		printf("\n--------------------------------------------");     // 5 times
