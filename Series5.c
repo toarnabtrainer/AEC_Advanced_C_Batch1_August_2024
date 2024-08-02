@@ -1,5 +1,5 @@
 //        index (i): 1    2    3    4    5 ... n
-// Series-1: total = 1! + 2! + 3! + 4! + 5! + ... n terms  (term = 2 * i - 1)
+// Series-1: total = 1! + 2! + 3! + 4! + 5! + ... n terms
 
 #include <stdio.h>
 int main(void) {
