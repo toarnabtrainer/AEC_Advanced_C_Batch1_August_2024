@@ -13,4 +13,12 @@ n = 5 (user given integer)
  3 | 14  23  22  21   8
  4 | 13  12  11  10   9
 --------------------------
-
+Algorithm:
+----------
+row = 0, col = 0
+for i = 1 to n*n
+	arr[row][col] = i
+	update row and col
+end for
+display arr
+end
