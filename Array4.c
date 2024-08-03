@@ -1,4 +1,4 @@
-
+/*
 Array Fill up:
 maxloc = 5
 	        col
@@ -18,7 +18,7 @@ int main(void) {
 	printf("\nInitializing the content of the array...");
 	for (row=0; row<maxloc; row++) {
 		for(col=0; col<maxloc; col++) {
-			...
+			arr[row][col] = 1 + ((row > col)? row: col);
 		}
 	}
 	printf("\n\nDisplaying the content of the array...\n");
