@@ -17,10 +17,8 @@ int main(void) {
 	int row, col, maxloc = 5;
 	printf("\nInitializing the content of the array...");
 	for (row=0; row<maxloc; row++) {
-		for (col=0; col<maxloc; col++) {
-			if (row == col) arr[row][col] = 10;
-			if (row + col == maxloc - 1) arr[row][col] += 40;
-		}
+		arr[row][row] = 10;
+		arr[row][maxloc - row - 1] += 40;
 	}
 	printf("\n\nDisplaying the content of the array...\n");
 	for (row=0; row<maxloc; row++) {
