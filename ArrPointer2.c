@@ -41,7 +41,6 @@ int main(void) {
 		}	
 	}
 }
-
 void arr_create(int a[], int *nn, int maxl) {
 	int i;
 	printf("\n\nCREATE Operation has been selected...");
@@ -60,7 +59,6 @@ void arr_create(int a[], int *nn, int maxl) {
 	}
 	printf("\n\nCREATE Operation has been completed successfully...");
 }
-
 void arr_insert(int a[], int *nn, int maxl) {
 	printf("\n\nINSERT Operation has been selected...");
 }
@@ -88,7 +86,6 @@ void arr_exit() {
 	printf("\n\nEXIT Operation has been selected...");
 	printf("\nEnd of the program...");
 }
-
 int menu(void) {
 	int ch = 0;
 	
