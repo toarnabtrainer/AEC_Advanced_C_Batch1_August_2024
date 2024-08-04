@@ -132,14 +132,53 @@ void arr_delete(int a[], int *nn) {
 	}	
 	printf("\n\nDELETE Operation has been completed successfully...");
 }
-void arr_search(const int a[], int n, int maxl) {
+void arr_search(const int a[], int nn, int maxl) {
+	int i, search_item;
 	printf("\n\nSEARCH Operation has been selected...");
-	
+	if (nn == 0) {
+		printf("\n\nNo data item exists in the array...");
+		printf("\nSearch can not be done...");
+	} else {
+		printf("\nPlease enter the search item: ");
+		scanf("%d", &search_item);
+		for(i = 0; i < nn; i++) {
+			if (search_item == a[i]) {
+				printf("\nSuccessful searching !!!");
+				printf("\n%d has been found at the location %d...", search_item, i);
+				break;
+			}
+		}
+		if (i == nn) {
+			printf("\nUnsuccessful searching !!!");
+			printf("\nData item %d could not be found in the array...", search_item);
+		}
+	}
 	printf("\n\nSEARCH Operation has been completed successfully...");
 }
+/*
+Algorithm for Bubble Sort: (considers index from 1 to n)
+
+for i = 1 to (n - 1)
+	for j = 1 to (n - i)
+	 	if (a[j] > a[j + 1])
+	 		swap a[j], a[j + 1]
+	 	end if
+	end for
+end for
+*/
 void arr_sort(int a[], int n) {
+	int i, j, temp;
 	printf("\n\nSORT Operation has been selected...");
-	
+	printf("\nPerforming the Bubble Sort operation...");
+	for (i = 1; i <= (n - 1); i++) {
+		for (j = 1; j <= (n - i); j++) {
+		 	if (a[j - 1] > a[j]) {
+		 		temp = a[j - 1];
+		 		a[j - 1] = a[j];
+		 		a[j] = temp;
+			 }
+		}
+	}
 	printf("\n\nSORT Operation has been completed successfully...");
 }
 void arr_display(const int a[], int n, int maxloc) {
