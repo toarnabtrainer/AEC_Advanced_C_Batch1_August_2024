@@ -59,17 +59,88 @@ void arr_create(int a[], int *nn, int maxl) {
 	}
 	printf("\n\nCREATE Operation has been completed successfully...");
 }
+/*
+n = 8, maxloc = 10, loc = 2
+
+     Index =>   0   1   2   3   4   5   6   7   8   9
+Data Items =>   4   2   9   1   7   6   3   5
+                        ^
+                        |
+            new_item = 10        
+   Target Location Range <-- Source Location Range
+        (8 to 3)               (7 to 2)
+      (n to loc + 1)           (n - 1 to loc)
+    for i = n to (loc + 1) step -1   (here i is the target index)
+        arr[i] = arr[i - 1]
+    for i = (n - 1) to loc step -1   (here i is the source index)
+        arr[i + 1] = arr[i]
+*/
 void arr_insert(int a[], int *nn, int maxl) {
+	int new_item, loc, i;
 	printf("\n\nINSERT Operation has been selected...");
+	if (*nn == maxl) {
+		printf("\nO V E R F L O W !!!");
+		printf("\nNo Space for INSERT operation...");
+	} else {
+		printf("\nThere is a space for INSERT operation...");
+		printf("\nPlease enter the location value for insertion: ");
+		scanf("%d", &loc);
+		printf("\nPlease enter the new data item value for insertion: ");
+		scanf("%d", &new_item);
+		for (i = (*nn) - 1; i >= loc; i--) {   // here i is the source index
+	        a[i + 1] = a[i];
+		}
+		a[loc] = new_item;
+		(*nn)++;
+		printf("%d data item has been inserted to location %d...", new_item, loc);
+	}
+	
+	printf("\n\nINSERT Operation has been completed successfully...");
 }
-void arr_delete(int a[], int *n) {
+/*
+n = 8, maxloc = 10, loc = 2
+
+     Index =>   0   1   2   3   4   5   6   7   8   9
+Data Items =>   4   2   9   1   7   6   3   5
+                        ^
+                        |
+            del_item =  9        
+   Target Location Range <-- Source Location Range
+        (2 to 6)               (3 to 7)
+      (loc to n - 2)           (loc + 1 to n - 1)
+    for i = loc to (n - 2)           (here i is the target index)
+        arr[i] = arr[i + 1]
+    for i = (loc + 1) to (n - 1)     (here i is the source index)
+        arr[i - 1] = arr[i]
+*/
+void arr_delete(int a[], int *nn) {
+	int del_item, loc, i;
 	printf("\n\nDELETE Operation has been selected...");
+	if (*nn == 0) {
+		printf("\nU N D E R F L O W !!!");
+		printf("\nNo data for DELETE operation...");
+	} else {
+		printf("\nThere is data for DELETE operation...");
+		printf("\nPlease enter the location value for deletion: ");
+		scanf("%d", &loc);
+		del_item = a[loc];
+		for (i = (loc + 1); i <= (*nn - 1); i++) {   // here i is the source index
+	        a[i - 1] = a[i];
+		}
+		(*nn)--;
+		printf("%d data item has been deleted from location %d...", del_item, loc);
+	}	
+	printf("\n\nDELETE Operation has been completed successfully...");
 }
 void arr_search(const int a[], int n, int maxl) {
 	printf("\n\nSEARCH Operation has been selected...");
+	
+	printf("\n\nSEARCH Operation has been completed successfully...");
 }
 void arr_sort(int a[], int n) {
 	printf("\n\nSORT Operation has been selected...");
+	
+	printf("\n\nSORT Operation has been completed successfully...");
 }
 void arr_display(const int a[], int n, int maxloc) {
 	int i;
