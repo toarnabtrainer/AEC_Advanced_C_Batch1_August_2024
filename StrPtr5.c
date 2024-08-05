@@ -16,7 +16,7 @@ int main(void) {
 void person_input(struct person *pp) {
 	printf("\n\nEnter your inputs: ");
 	printf("\nPlease enter the age of the person: ");
-	scanf("%d", &pp->age);
+	scanf("%d", &(*pp).age);
 	printf("Please enter the salary of the person: ");
 	scanf("%d", &pp->sal);
 }

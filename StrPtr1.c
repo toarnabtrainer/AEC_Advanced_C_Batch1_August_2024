@@ -15,6 +15,7 @@ int main(void) {
 	
 	printf("\nDisplaying user inputs...");
 	printf("\nSo the age = %d and salary = %d...", p.age, p.sal);
+	printf("\n\nSizeof(p) = %d, Sizeof(p.age) = %d, Sizeof(p.sal) = %d...", sizeof(p), sizeof(p.age), sizeof(p.sal));
 	
 	printf("\n\nEnd of the program...");
 }
