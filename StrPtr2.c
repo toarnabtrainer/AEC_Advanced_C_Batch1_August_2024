@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 struct person {
-		int age;
-		int sal;
-	};
+	int age;
+	int sal;
+};
 	
 int main(void) {
 	struct person p[5];

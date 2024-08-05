@@ -1,8 +1,9 @@
 #include <stdio.h>
 struct person {
-		int age;
-		int sal;
-	};	
+	int age;
+	int sal;
+};
+malloc
 int main(void) {
 	struct person p;
 	void person_input(struct person *);
