@@ -84,20 +84,50 @@ int stack_menu(void) {
 }
 
 void stack_push(int stk[], int *tp, int maxstk) {
+	int new_item;
 	printf("\n\nPUSH Operaton has been selected...");
-	
+	if (*tp == maxstk - 1) {
+		printf("\nOVERFLOW !!!");
+		printf("\nNo space for PUSH of new data items...");
+	} else {
+		printf("\nPlease enter the new data item: ");
+		scanf("%d", &new_item);
+		(*tp)++;
+		stk[*tp] = new_item;
+		printf("\nSo new data item %d has been pushed at the location %d...", new_item, *tp);
+	}
 	printf("\n\nPUSH Operation has been completed successfully...");
 }
 
 void stack_pop(int stk[], int *tp) {
+	int old_item;
 	printf("\n\nPOP Operaton has been selected...");
-	
+	if (*tp == -1) {
+		printf("\nUNDERFLOW !!!");
+		printf("\nThe stack is completly empty...");
+	} else {
+		old_item = stk[*tp];
+		printf("\nSo item %d has been pooped from the location %d...", old_item, *tp);
+		(*tp)--;
+	}
 	printf("\n\nPOP Operation has been completed successfully...");
 }
 
 void stack_display(const int stk[], int tp, int maxstk) {
+	int i;
 	printf("\n\nDISPLAY Operaton has been selected...");
 	
+	if (tp == -1) {
+		printf("\nThe stack is completly empty...");
+		printf("\nNo data has been found to get printed...");
+	} else {
+		if (tp == maxstk - 1) {
+			printf("\nThe stack is completely filled up...");
+		}
+		for (i = tp; i >= 0; i--) {
+			printf("\nLocation number %3d and content %3d...", i, stk[i]);
+		}
+	}
 	printf("\n\nDISPLAY Operation has been completed successfully...");	
 }
 
