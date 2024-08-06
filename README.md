@@ -17,10 +17,10 @@
 
 <hr>
 
-## Class Assignment:
+## Solving Problems from Leetcode (https://leetcode.com/):
 
 <pre>
-Leetcode 146: 136. Single Number
+Leetcode 146: 136. Single Number (Execution Time 1069 ms on Leetcode Portal)
 int singleNumber(int* nums, int numsSize) {
     int count;
     for(int i = 0; i < numsSize; i++) {
@@ -33,6 +33,7 @@ int singleNumber(int* nums, int numsSize) {
     return 0;
 }
 
+Leetcode 146: 136. Single Number (Execution Time 3 ms on Leetcode Portal)
 int singleNumber(int* nums, int numsSize) {
     int output = 0;
     for(int i = 0; i < numsSize; i++) {
@@ -40,6 +41,27 @@ int singleNumber(int* nums, int numsSize) {
     }
     return output;
 }
+</pre>
+
+## Class Assignments:
+
+<pre>
+Assignment 1: Merge two sorted arrays.
+For Example:
+    arr1 = [11 33 77 99]
+    arr2 = [22, 44, 66, 77, 88, 99]
+    output_array = [11, 22, 33, 44, 66, 77, 77, 88, 99, 99]
+
+Assignment 2: Remove Duplicates from a Sorted Array.
+For Example:
+    arr1 = [11, 22, 33, 44, 66, 77, 77, 88, 99, 99]
+    output_array = [11, 22, 33, 44, 66, 77, 88, 99]
+
+Assignment 3: Validation of a string with ( and ) Parentheses.
+For Example:
+    input_string: (()())   outcome: valid
+    input_string: ((())    outcome: invalid
+    input_string: )(())    outcome: invalid
 </pre>
 
 <hr>
