@@ -14,11 +14,12 @@ int main(void) {
 	printf("\n\nThe string in the upper case is %s...", my_str_strupr(str));
 	printf("\n\nThe string in the upper case is %s...", my_str_strlwr(str));
 	my_str_display(str);
-	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "amit"));
-	printf("\nOutcome of comparing two string is %d...", strcmp("amitava", "amit"));
-	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "amitava"));
-	printf("\nOutcome of comparing two string is %d...", strcmp("Amit", "amit"));
-	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "kamal"));
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("amit", "amit"));  // 0
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("amitava", "amit"));  // 1
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("amit", "amitava"));  // -1
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("Amit", "amit"));  // -1
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("amit", "kamal"));  // -1
+	printf("\nOutcome of comparing two string is %d...", my_str_strcmp("X", "kamal"));  // -1
 	
 	printf("\n\nEnd of the program...");
 }
