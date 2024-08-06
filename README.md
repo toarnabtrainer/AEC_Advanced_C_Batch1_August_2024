@@ -32,6 +32,14 @@ int singleNumber(int* nums, int numsSize) {
     }
     return 0;
 }
+
+int singleNumber(int* nums, int numsSize) {
+    int output = 0;
+    for(int i = 0; i < numsSize; i++) {
+        output = output ^ nums[i];
+    }
+    return output;
+}
 </pre>
 
 <hr>
