@@ -4,10 +4,11 @@ int main(void) {
 	//            0123456789
 	char str[] = "unIVERsiTy";
 	int i;
-	void my_str_display(char *);
-	int my_str_strlen(char *);
+	void my_str_display(const char *);
+	int my_str_strlen(const char *);
 	char *my_str_strupr(char *);
 	char *my_str_strlwr(char *);
+	int my_str_strcmp(const char *, const char *);
 	
 	printf("\nThe length of the string is %d...", my_str_strlen(str));
 	my_str_display(str);
@@ -58,14 +59,14 @@ char * my_str_strupr(char *st) {
 	}
 	return st;
 }
-int my_str_strlen(char *st) {
+int my_str_strlen(const char *st) {
 	int i = 0;
 	while (*(st + i) != '\x0') {
 		i++;
 	}
 	return i;
 }
-void my_str_display(char *st) {
+void my_str_display(const char *st) {
 	int i;
 	// printf("\nThe string is %s...", st);
 	
@@ -76,4 +77,8 @@ void my_str_display(char *st) {
 		i++;
 	}
 	printf("...");
+}
+
+int my_str_strcmp(const char *st1, const char *st2) {
+	....
 }
