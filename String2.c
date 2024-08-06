@@ -9,6 +9,7 @@ int main(void) {
 	char *my_str_strupr(char *);
 	char *my_str_strlwr(char *);
 	int my_str_strcmp(const char *, const char *);
+	int my_str_strcmpi(char *, char *);
 	
 	printf("\nThe length of the string is %d...", my_str_strlen(str));
 	my_str_display(str);
@@ -22,8 +23,8 @@ int main(void) {
 	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("amit", "kamal"));  // -1
 	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("X", "kamal"));  // -1
 	printf("\n-------------------------------------------------------");
-	printf("\nOutcome of comparing two strings is %d...", strcmp("Amit", "aMIt"));  // -1
-	printf("\nOutcome of comparing two strings is %d...", strcmpi("Amit", "aMIt"));  // -1
+	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("Amit", "aMIt"));  // -1
+	printf("\nOutcome of comparing two strings is %d...", my_str_strcmpi("Amit", "aMIt"));  // 0
 	
 	printf("\n\nEnd of the program...");
 }
@@ -72,6 +73,7 @@ char * my_str_strupr(char *st) {
 		}
 		i++;
 	}
+	printf("\nTask completed...");
 	return st;
 }
 int my_str_strlen(const char *st) {
@@ -93,4 +95,14 @@ void my_str_display(const char *st) {
 	}
 	printf("...");
 }
-
+int my_str_strcmpi(char *st1, char *st2) {
+	int diff, i = -1;
+	printf("\n%s and %s...", st1, st2);
+	while (i == -1 || (*(st1 + i) != '\x0' && *(st2 + i) != '\x0')) {
+		i++;
+		diff = toupper(*(st1 + i)) - toupper(*(st2 + i));
+		if (diff != 0) break;
+	}
+	if (diff == 0) return 0;
+	return (diff < 0)? -1: 1;
+}
