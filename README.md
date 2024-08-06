@@ -45,6 +45,7 @@ int singleNumber(int* nums, int numsSize) {
 
 ## Class Assignments:
 
+<b>
 <pre>
 Assignment 1: Merge two sorted arrays.
 For Example:
@@ -63,5 +64,6 @@ For Example:
     input_string: ((())    outcome: invalid
     input_string: )(())    outcome: invalid
 </pre>
+</b>
 
 <hr>
