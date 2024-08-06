@@ -11,9 +11,14 @@ int main(void) {
 	
 	printf("\nThe length of the string is %d...", my_str_strlen(str));
 	my_str_display(str);
-	// printf("\n\nThe string in the upper case is %s...", my_str_strupr(str));
+	printf("\n\nThe string in the upper case is %s...", my_str_strupr(str));
 	printf("\n\nThe string in the upper case is %s...", my_str_strlwr(str));
 	my_str_display(str);
+	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "amit"));
+	printf("\nOutcome of comparing two string is %d...", strcmp("amitava", "amit"));
+	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "amitava"));
+	printf("\nOutcome of comparing two string is %d...", strcmp("Amit", "amit"));
+	printf("\nOutcome of comparing two string is %d...", strcmp("amit", "kamal"));
 	
 	printf("\n\nEnd of the program...");
 }
@@ -29,7 +34,16 @@ Two categories:
 	0 -> 48, 1 -> 49, ..., 9 -> 57
 */
 char * my_str_strlwr(char *st) {
-	....
+	int i = 0;
+	char ch;
+	while (*(st + i) != '\x0') {
+		ch = *(st + i);
+		if (ch >= 'A' && ch <= 'Z') {
+			*(st + i) = ch + 32;
+		}
+		i++;
+	}
+	return st;
 }
 char * my_str_strupr(char *st) {
 	int i = 0;
