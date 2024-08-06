@@ -62,6 +62,7 @@ For Example:
     input_string: (()())   outcome: valid
     input_string: ((())    outcome: invalid
     input_string: )(())    outcome: invalid
+    input_string: )))(((   outcome: invalid
 </pre>
 
 <hr>
