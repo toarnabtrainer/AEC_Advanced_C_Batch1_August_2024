@@ -57,7 +57,7 @@ For Example:
     arr1 = [11, 22, 33, 44, 66, 77, 77, 88, 99, 99]
     output_array = [11, 22, 33, 44, 66, 77, 88, 99]
 
-Assignment 3: Validation of a string with ( and ) Parentheses.
+Assignment 3: Validation of a string with ( and ) parentheses.
 For Example:
     input_string: (()())   outcome: valid
     input_string: ((())    outcome: invalid
