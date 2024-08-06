@@ -21,6 +21,9 @@ int main(void) {
 	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("Amit", "amit"));  // -1
 	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("amit", "kamal"));  // -1
 	printf("\nOutcome of comparing two strings is %d...", my_str_strcmp("X", "kamal"));  // -1
+	printf("\n-------------------------------------------------------");
+	printf("\nOutcome of comparing two strings is %d...", strcmp("Amit", "aMIt"));  // -1
+	printf("\nOutcome of comparing two strings is %d...", strcmpi("Amit", "aMIt"));  // -1
 	
 	printf("\n\nEnd of the program...");
 }
