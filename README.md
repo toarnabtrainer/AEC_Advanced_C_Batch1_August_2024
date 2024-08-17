@@ -7,6 +7,7 @@
 
 * **C Tutorials / MCQ / Sample Program List:** https://www.includehelp.com/c-programming-examples-solved-c-programs.aspx
 * **C++ Tutorials / MCQ / Sample Program List:** https://www.includehelp.com/cpp-tutorial/
+* **From Novice to Expert: Mastering C++ Programming:** https://codedamn.com/learn/cpp-language
 
 <br>
 
