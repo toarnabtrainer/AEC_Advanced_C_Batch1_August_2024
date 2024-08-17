@@ -7,7 +7,9 @@
 
 * **C Tutorials / MCQ / Sample Program List:** https://www.includehelp.com/c-programming-examples-solved-c-programs.aspx
 * **C++ Tutorials / MCQ / Sample Program List:** https://www.includehelp.com/cpp-tutorial/
+* **C++ Tutorials In Hindi (CodeWithHarry):** https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL
 * **From Novice to Expert: Mastering C++ Programming:** https://codedamn.com/learn/cpp-language
+
 
 <br>
 
